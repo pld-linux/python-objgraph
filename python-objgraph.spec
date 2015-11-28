@@ -41,17 +41,13 @@ Moduł do wizualizacji grafów pythonowych obiektów.
 %build
 # CC/CFLAGS is only for arch packages - remove on noarch packages
 # CC="%{__cc}" \
-# CFLAGS="%{rpmcflags}" \
-%{__python} setup.py build
+# %py_build
 
 %{?with_tests:%{__python} setup.py test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__python} setup.py install \
-	--skip-build \
-	--optimize=2 \
-	--root=$RPM_BUILD_ROOT
+%py_install
 
 # install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 # cp -a examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
