@@ -23,6 +23,9 @@ BuildRequires:	python-setuptools
 %if %{with python3}
 BuildRequires:	python3-setuptools
 %endif
+%if %{with tests}
+BuildRequires:	graphviz
+%endif
 Requires:	python-modules
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
