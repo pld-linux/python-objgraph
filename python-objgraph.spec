@@ -9,7 +9,7 @@ Summary:	Draws Python object reference graphs with graphviz
 Summary(pl.UTF-8):	Rysuje referencje pomiedzy obiektamiy przy uzyciu graphviz
 Name:		python-objgraph
 Version:	3.4.0
-Release:	2
+Release:	3
 License:	MIT
 Group:		Development/Languages/Python
 Source0:	https://files.pythonhosted.org/packages/source/o/%{module}/%{module}-%{version}.tar.gz
