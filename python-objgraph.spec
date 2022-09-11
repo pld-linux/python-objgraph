@@ -9,15 +9,14 @@
 Summary:	Draws Python object reference graphs with graphviz
 Summary(pl.UTF-8):	Rysowanie referencji między obiektami przy uzyciu graphviza
 Name:		python-objgraph
-Version:	3.4.1
-Release:	7
+Version:	3.5.0
+Release:	1
 License:	MIT
 Group:		Development/Languages/Python
 #Source0Download: https://pypi.org/simple/objgraph/
 Source0:	https://files.pythonhosted.org/packages/source/o/objgraph/%{module}-%{version}.tar.gz
-# Source0-md5:	4f416da377b3c7799799c357c6f0c2ed
-Patch0:		%{name}-mock.patch
-URL:		http://mg.pov.lt/objgraph/
+# Source0-md5:	31ddfc309dd9ae41ddc50763737fdc6f
+URL:		https://mg.pov.lt/objgraph/
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.714
 %if %{with python2}
@@ -29,7 +28,7 @@ BuildRequires:	python-mock
 %endif
 %endif
 %if %{with python3}
-BuildRequires:	python3-modules >= 1:3.5
+BuildRequires:	python3-modules >= 1:3.6
 BuildRequires:	python3-setuptools
 %if %{with tests}
 BuildRequires:	python3-graphviz
@@ -58,7 +57,7 @@ wycieków pamięci.
 Summary:	Draws Python object reference graphs with graphviz
 Summary(pl.UTF-8):	Rysowanie referencji między obiektami przy uzyciu graphviza
 Group:		Development/Languages/Python
-Requires:	python3-modules >= 1:3.5
+Requires:	python3-modules >= 1:3.6
 
 %description -n python3-%{module}
 Module that lets you visually explore Python object graphs and debug
@@ -81,7 +80,6 @@ Dokumentacja API modułu Pythona objgraph.
 
 %prep
 %setup -q -n %{module}-%{version}
-%patch0 -p1
 
 %build
 %if %{with python2}
