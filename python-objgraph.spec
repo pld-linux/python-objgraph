@@ -3,14 +3,15 @@
 %bcond_without	doc	# Sphinx documentation
 %bcond_without	tests	# unit tests
 %bcond_without	python2 # CPython 2.x module
-%bcond_without	python3 # CPython 3.x module
+%bcond_with	python3 # CPython 3.x module (built from python3-objgraph.spec)
 
 %define 	module	objgraph
 Summary:	Draws Python object reference graphs with graphviz
 Summary(pl.UTF-8):	Rysowanie referencji między obiektami przy uzyciu graphviza
 Name:		python-objgraph
+# keep 3.5.x here for python2 support
 Version:	3.5.0
-Release:	1
+Release:	2
 License:	MIT
 Group:		Development/Languages/Python
 #Source0Download: https://pypi.org/simple/objgraph/
